@@ -75,8 +75,8 @@ class Postdb extends Component {
                       <ul>
                         <li><a href="#"><span className="btn_icon"><img src="/images/icon_001.png" alt="share" /></span>Share</a></li>
                         <li><a href="#"><span className="btn_icon"><img src="/images/icon_002.png" alt="share" /></span>Flag</a></li>
-                        <li><a href="#"><span className="btn_icon"><img src="/images/icon_003.png" alt="share" /></span>0 Likes</a></li>
-                        <li><a href="#"><span className="btn_icon"><img src="/images/icon_004.png" alt="share" /></span>4 Comments</a></li>
+                        <li><a href="#"><span className="btn_icon"><img src="/images/icon_003.png" alt="share" /></span>{col.like.length} Likes</a></li>
+                        <li><a href="#"><span className="btn_icon"><img src="/images/icon_004.png" alt="share" /></span>{col.comment.length} Comments</a></li>
                       </ul>
                     </div>
                   </div>
