@@ -1,8 +1,18 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom';
+import {Link, Route, browserHistory, withRouter} from 'react-router-dom';
 
 
 class Header extends Component {
+    constructor(props) {
+        super(props);
+        this.state={
+        }
+     }
+    
+logout = () => {
+    localStorage.setItem('userid', "");
+    localStorage.setItem('username', "");
+} 
 
   render() {
      return (
@@ -53,13 +63,13 @@ class Header extends Component {
                     <input type="text" placeholder="Search" className="txt_box" />
                     <div className="msg_box"><a href="#"><span className="msg_count">100</span></a></div>
                     <div className="info_div">
-                    <div className="image_div"> <img src="/images/pic.png" /> </div>
                     <div className="dropdown" >                   
+                    <div className="image_div"> <img src="/images/pic.png" /> </div>
                     
-                    <button className="dropbtn">Me</button>
+                    <button className="dropbtn">-</button>
                         <div class="dropdown-content" >
                             <Link to = "/home">Home</Link>
-                            <a href="#">Logout</a>
+                            <Link to = "/user/login" onClick={this.logout}>Logout</Link>
                         </div>
                     </div>
 
