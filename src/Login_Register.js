@@ -11,7 +11,7 @@ class Login_Register extends Component {
         <Switch>
             <Route path='/user/register' component={Register}/>
             <Route path='/user/login' component={Login}/>
-            <Redirect to="/user/register" />
+            <Route path="/" component={() => <Redirect to="/user/register" />} />
         </Switch>
           
         </div>
