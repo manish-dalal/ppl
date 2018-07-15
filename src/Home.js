@@ -44,7 +44,7 @@ class Home extends Component {
   }
 
   render() {
-    if(this.state.userpoststate.length === 0){
+    if(this.state.userpoststate.length === "no post"){
       return false //return false or a <Loader/> when you don't have anything in your photoshow[]
      }
      
