@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Login from './Login'
 import Register from './Register';
-import {Switch,Route} from 'react-router-dom';
+import {Switch,Route,Redirect} from 'react-router-dom';
 
 class Login_Register extends Component {
    
@@ -11,6 +11,7 @@ class Login_Register extends Component {
         <Switch>
             <Route path='/user/register' component={Register}/>
             <Route path='/user/login' component={Login}/>
+            <Redirect from="/" to="/user/register" />
         </Switch>
           
         </div>
